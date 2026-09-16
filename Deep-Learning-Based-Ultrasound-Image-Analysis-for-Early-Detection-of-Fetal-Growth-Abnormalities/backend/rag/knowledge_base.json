@@ -1,0 +1,205 @@
+{
+  "fetal_conditions": [
+    {
+      "id": 1,
+      "condition": "Normal Fetal Development",
+      "description": "Fetus developing within normal parameters. Appropriate growth velocity, normal amniotic fluid volume, normal umbilical artery Doppler.",
+      "iugr_risk": "Low (0-5%)",
+      "imaging_features": "Normal biometry, appropriate for gestational age, no structural abnormalities",
+      "recommendations": "Continue routine prenatal care, repeat ultrasound in 4 weeks"
+    },
+    {
+      "id": 2,
+      "condition": "Fetal Growth Restriction (FGR) - Mild",
+      "description": "Mild growth restriction with abdominal circumference or estimated fetal weight 10th-20th percentile.",
+      "iugr_risk": "Moderate (20-40%)",
+      "imaging_features": "Decreased AC, normal FL, cerebroplacental ratio >1.0, normal umbilical artery",
+      "maternal_factors": "Moderate hypertension, smoking, poor nutrition",
+      "recommendations": "Doppler studies, close monitoring, repeat ultrasound in 2 weeks"
+    },
+    {
+      "id": 3,
+      "condition": "Fetal Growth Restriction (FGR) - Moderate to Severe",
+      "description": "Significant growth restriction with EFW <10th percentile, concerning Doppler indices.",
+      "iugr_risk": "High (60-80%)",
+      "imaging_features": "Markedly decreased AC, FL <10th percentile, abnormal cerebroplacental ratio, elevated S/D ratio in umbilical artery",
+      "maternal_factors": "Preeclampsia, severe hypertension, placental insufficiency, maternal diabetes",
+      "recommendations": "Immediate hospitalization, frequent monitoring (2-3 times per week), consider delivery if >34 weeks"
+    },
+    {
+      "id": 4,
+      "condition": "Macrosomia",
+      "description": "Excessive fetal growth with EFW >90th percentile for gestational age.",
+      "iugr_risk": "Not IUGR but increased perinatal complications",
+      "imaging_features": "Large AC and FL biometry, increased subcutaneous fat",
+      "maternal_factors": "Maternal diabetes, obesity, excessive weight gain",
+      "recommendations": "Glucose tolerance testing, dietary counseling, assess for gestational diabetes"
+    },
+    {
+      "id": 5,
+      "condition": "Polyhydramnios",
+      "description": "Excess amniotic fluid volume (AFI >25 cm or deepest pocket >10 cm).",
+      "iugr_risk": "Associated with various conditions including FGR",
+      "imaging_features": "Large amniotic fluid pockets, fetus may appear 'floating'",
+      "maternal_factors": "Maternal diabetes, Rh incompatibility, multiple pregnancy",
+      "recommendations": "Detailed fetal anatomy survey, monitor for preterm labor, serial ultrasounds monthly"
+    },
+    {
+      "id": 6,
+      "condition": "Oligohydramnios",
+      "description": "Decreased amniotic fluid volume (AFI <5 cm or deepest pocket <2 cm).",
+      "iugr_risk": "High, especially if associated with growth restriction",
+      "imaging_features": "Minimal amniotic fluid, fetus may appear crowded",
+      "maternal_factors": "Preeclampsia, chronic hypertension, placental insufficiency, fetal anomaly",
+      "recommendations": "Check maternal blood pressure, fetal renal assessment, frequent monitoring"
+    },
+    {
+      "id": 7,
+      "condition": "Placental Insufficiency",
+      "description": "Decreased placental perfusion and function affecting fetal growth and oxygenation.",
+      "iugr_risk": "Very High (80%+)",
+      "imaging_features": "FGR pattern, abnormal Doppler - reversed end-diastolic flow in umbilical artery, increased pulsatility",
+      "maternal_factors": "Severe preeclampsia, maternal hypertension, placental abruption history",
+      "recommendations": "URGENT: Fetal monitoring, consider delivery timing, neonatal team notification"
+    },
+    {
+      "id": 8,
+      "condition": "Umbilical Cord Abnormality",
+      "description": "Single umbilical artery, true knot, cord around neck affecting fetal perfusion.",
+      "iugr_risk": "Moderate to High (40-70%)",
+      "imaging_features": "Only one artery visible in cord, color Doppler shows cord entanglement, abnormal amniotic fluid",
+      "maternal_factors": "Maternal diabetes, advanced maternal age",
+      "recommendations": "Frequent Doppler monitoring, assess fetal growth, consider delivery before term if deterioration"
+    }
+  ],
+  "maternal_conditions": [
+    {
+      "id": 1,
+      "condition": "Maternal Hypertension",
+      "effect_on_fetus": "Decreases placental perfusion, leading to FGR and oligohydramnios",
+      "severity_impact": "Mild HTN (140-160): low risk; Severe HTN (>180): high FGR risk",
+      "management": "Blood pressure monitoring, antihypertensive therapy, frequent ultrasounds"
+    },
+    {
+      "id": 2,
+      "condition": "Preeclampsia",
+      "effect_on_fetus": "Severe placental dysfunction, high risk of FGR and sudden fetal death",
+      "severity_impact": "Mild: moderate risk; Severe: >70% FGR risk, requires urgent delivery consideration",
+      "management": "Magnesium sulfate, antihypertensive agents, delivery timing optimization"
+    },
+    {
+      "id": 3,
+      "condition": "Gestational Diabetes Mellitus (GDM)",
+      "effect_on_fetus": "Usually causes macrosomia initially; if poorly controlled, can lead to FGR and polyhydramnios",
+      "severity_impact": "Well-controlled: minimal risk; Poorly controlled: 30-40% complication risk",
+      "management": "Dietary counseling, glucose monitoring, insulin if needed, frequent growth assessment"
+    },
+    {
+      "id": 4,
+      "condition": "Maternal Smoking",
+      "effect_on_fetus": "Decreases oxygen availability, increases FGR risk 1.5-2 fold",
+      "severity_impact": ">10 cigarettes/day: 30-40% FGR risk",
+      "management": "Smoking cessation counseling, increased monitoring frequency"
+    },
+    {
+      "id": 5,
+      "condition": "Systemic Lupus Erythematosus (SLE)",
+      "effect_on_fetus": "Placental inflammation, miscarriage risk, FGR, stillbirth risk elevated",
+      "severity_impact": "High-risk condition with 20-50% adverse pregnancy outcomes",
+      "management": "Low-dose aspirin, heparin, frequent monitoring, early delivery consideration"
+    },
+    {
+      "id": 6,
+      "condition": "Renal Disease",
+      "effect_on_fetus": "Chronic hypoxia, proteinuria, hypertension increase FGR risk",
+      "severity_impact": "Creatinine >1.4: 50% FGR risk; >2.5: near 100% adverse outcomes",
+      "management": "Close collaboration with nephrologist, frequent monitoring, delivery timing"
+    },
+    {
+      "id": 7,
+      "condition": "Maternal Malnutrition",
+      "effect_on_fetus": "Inadequate substrate for fetal growth, leads to FGR",
+      "severity_impact": "Severe malnutrition: 30-50% FGR risk",
+      "management": "Nutritional counseling, supplementation, increased monitoring"
+    },
+    {
+      "id": 8,
+      "condition": "Antiphospholipid Syndrome (APS)",
+      "effect_on_fetus": "Placental thrombosis, infarction, FGR, stillbirth risk 50%+",
+      "severity_impact": "Very high-risk condition",
+      "management": "Anticoagulation therapy (heparin + aspirin), frequent fetal assessments"
+    }
+  ],
+  "doppler_parameters": [
+    {
+      "parameter": "Umbilical Artery S/D Ratio",
+      "normal_range": "<3.0 at term",
+      "abnormal": ">3.5",
+      "interpretation": "Elevation suggests decreased placental perfusion and FGR risk"
+    },
+    {
+      "parameter": "Cerebroplacental Ratio (CPR)",
+      "normal_range": ">1.08 at term",
+      "abnormal": "<1.08",
+      "interpretation": "Low CPR indicates brain-sparing effect in FGR"
+    },
+    {
+      "parameter": "Umbilical Artery Diastolic Flow",
+      "normal_range": "Forward throughout diastole",
+      "abnormal": "Absent or reversed",
+      "interpretation": "AEDV or REDV indicates severe placental insufficiency, immediate delivery consideration"
+    }
+  ],
+  "biometric_measurements": [
+    {
+      "parameter": "Abdominal Circumference (AC)",
+      "normal_pattern": "Grows appropriately with gestational age",
+      "fgr_indicator": "<10th percentile most sensitive indicator of FGR",
+      "measurement_technique": "Transverse view at level of stomach and umbilical vein"
+    },
+    {
+      "parameter": "Femur Length (FL)",
+      "normal_pattern": "Linear growth until 30 weeks, then plateaus",
+      "fgr_indicator": "Late-onset FGR usually spares FL; short FL suggests constitutional small stature or chromosomal abnormality",
+      "measurement_technique": "Full ossified femur from greater trochanter to lateral femoral condyle"
+    },
+    {
+      "parameter": "Head Circumference (HC)",
+      "normal_pattern": "Grows consistently with GA",
+      "fgr_indicator": "Relatively preserved early; late-onset FGR may show HC <10th percentile",
+      "measurement_technique": "Outer-to-outer diameter of fetal skull in biparietal plane"
+    },
+    {
+      "parameter": "Amniotic Fluid Index (AFI)",
+      "normal_range": "8-18 cm (varies by GA)",
+      "abnormal": "<5 cm (oligohydramnios) or >25 cm (polyhydramnios)",
+      "fgr_association": "Oligohydramnios common in FGR; may indicate severe placental insufficiency"
+    }
+  ],
+  "risk_stratification": [
+    {
+      "risk_level": "Low Risk (Normal)",
+      "criteria": "EFW ≥20th percentile, normal Doppler, normal AFI, no maternal risk factors",
+      "fgr_probability": "0-5%",
+      "follow_up": "Routine care, ultrasound in 4-6 weeks"
+    },
+    {
+      "risk_level": "Moderate Risk",
+      "criteria": "EFW 10-20th percentile, normal/borderline Doppler, maternal risk factors present",
+      "fgr_probability": "20-40%",
+      "follow_up": "Doppler studies, ultrasound every 2-3 weeks, maternal optimization"
+    },
+    {
+      "risk_level": "High Risk",
+      "criteria": "EFW <10th percentile, abnormal Doppler, oligohydramnios, severe maternal conditions",
+      "fgr_probability": "60-80%",
+      "follow_up": "Twice weekly monitoring, delivery planning at 34-36 weeks depending on severity"
+    },
+    {
+      "risk_level": "Very High Risk (URGENT)",
+      "criteria": "EFW <5th percentile, critically abnormal Doppler (AEDV/REDV), severe oligohydramnios",
+      "fgr_probability": "80%+",
+      "follow_up": "Hospitalization, daily monitoring, may require immediate delivery"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+backend/Datasets/
+Datasets/
+backend/uploads/
+uploads/
+*.pdf
+PyWhatKit_DB.txt
+*.pth
+*.pt
+backend/model/checkpoint/*.pth
+
+

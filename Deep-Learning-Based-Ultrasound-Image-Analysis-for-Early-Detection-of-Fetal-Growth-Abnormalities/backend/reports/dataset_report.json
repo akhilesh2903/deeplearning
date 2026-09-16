@@ -1,0 +1,23 @@
+{
+    "raw_total": 2668,
+    "duplicates_removed": 562,
+    "unique_total": 2106,
+    "missing_masks": 1281,
+    "splits": {
+        "train": {
+            "normal": 184,
+            "fgr": 49,
+            "abnormal": 1240
+        },
+        "validation": {
+            "normal": 39,
+            "fgr": 10,
+            "abnormal": 265
+        },
+        "test": {
+            "normal": 40,
+            "fgr": 12,
+            "abnormal": 267
+        }
+    }
+}

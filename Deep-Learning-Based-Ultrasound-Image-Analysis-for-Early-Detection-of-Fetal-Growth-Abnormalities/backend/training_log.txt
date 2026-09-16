@@ -1,0 +1,17 @@
+﻿
+  Device: cpu
+
+  Class mapping:
+    0: normal     -> Low Risk        (242 train images)
+    1: fgr        -> Moderate Risk   (241 train images)
+    2: abnormal   -> High Risk       (729 train images)
+
+  Split sizes: train=1212, val=208, test=249
+
+============================================================
+  U-Net FGR Training | Epochs: 25 | Batch: 16
+============================================================
+    Epoch 1 batch 20/76 loss=1.2497
+    Epoch 1 batch 40/76 loss=1.0926
+    Epoch 1 batch 60/76 loss=1.0019
+    Epoch 1 batch 76/76 loss=1.0017

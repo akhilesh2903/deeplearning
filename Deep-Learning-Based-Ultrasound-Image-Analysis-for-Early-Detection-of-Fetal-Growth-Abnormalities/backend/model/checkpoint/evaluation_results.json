@@ -1,0 +1,15 @@
+{
+  "train_accuracy": 64.19,
+  "val_accuracy": 62.98,
+  "test_accuracy": 64.26,
+  "precision": 54.14,
+  "recall": 64.26,
+  "f1": 58.4,
+  "best_val_accuracy": 62.98,
+  "epochs_trained": 15,
+  "split_counts": {
+    "train": 1212,
+    "val": 208,
+    "test": 249
+  }
+}

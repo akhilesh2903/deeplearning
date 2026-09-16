@@ -1,0 +1,27 @@
+Flask
+torch
+torchvision
+Pillow
+numpy
+scikit-learn
+sentence-transformers
+huggingface-hub
+transformers
+faiss-cpu
+scikit-image
+opencv-python-headless
+matplotlib
+requests
+python-dotenv
+reportlab
+pypdf
+pydicom
+kagglehub
+
+Flask-CORS
+fastapi
+uvicorn
+
+# MongoDB
+pymongo
+dnspython
