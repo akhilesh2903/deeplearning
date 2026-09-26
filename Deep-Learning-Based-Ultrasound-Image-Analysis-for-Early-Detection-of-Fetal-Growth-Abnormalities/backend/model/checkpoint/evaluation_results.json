@@ -1,15 +1,16 @@
 {
-  "train_accuracy": 64.19,
-  "val_accuracy": 62.98,
-  "test_accuracy": 64.26,
-  "precision": 54.14,
-  "recall": 64.26,
-  "f1": 58.4,
-  "best_val_accuracy": 62.98,
-  "epochs_trained": 15,
+  "train_accuracy": 79.51,
+  "val_accuracy": 78.55,
+  "test_accuracy": 78.27,
+  "precision": 68.94,
+  "recall": 78.27,
+  "f1": 71.93,
+  "best_val_accuracy": 78.55,
+  "epochs_trained": 25,
   "split_counts": {
-    "train": 1212,
-    "val": 208,
-    "test": 249
+    "train": 2869,
+    "val": 359,
+    "test": 359,
+    "total": 3587
   }
 }

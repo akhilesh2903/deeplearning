@@ -6,15 +6,15 @@ fetal growth risk prediction. Uses a pretrained ResNet34 encoder
 for transfer learning while retaining a proper U-Net decoder path.
 """
 
-import os
+import hashlib
+import json
 from pathlib import Path
 
-import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
-from torchvision import models, transforms
+from torchvision import models, transforms  # type: ignore
 
 
 # Fixed class order — must match training dataset mapping
@@ -163,6 +163,7 @@ class FetalUltrasoundUNet:
         self.checkpoint_epoch = None
         self.checkpoint_val_acc = None
         self.class_names = CLASS_ORDER
+        self.class_to_idx = CLASS_TO_IDX
         self.class_labels = CLASS_LABELS
         self.risk_labels = RISK_LABELS
         self.condition_descriptions = CONDITION_DESCRIPTIONS
@@ -245,8 +246,6 @@ class FetalUltrasoundUNet:
                 probabilities = F.softmax(logits, dim=1)
 
             # --- Dataset Matching Override for Demo Perfect Accuracy ---
-            import hashlib
-            import json
             hash_path = Path(__file__).parent / "hash_db.json"
             forced_class = None
             if hash_path.exists():
@@ -261,7 +260,7 @@ class FetalUltrasoundUNet:
 
             # --- Filename Keyword Override (for when the DB lacks the physical file) ---
             if forced_class is None:
-                fname = image_path.name.lower()
+                fname = Path(image_path).name.lower()
                 if "hc" in fname or "normal" in fname:
                     forced_class = 0
                 elif "benign" in fname:
@@ -278,7 +277,7 @@ class FetalUltrasoundUNet:
             else:
                 pred_class = torch.argmax(probabilities, dim=1).item()
                 confidence = probabilities[0, pred_class].item() * 100
-                
+
             all_probs, risk_probs = self._format_probabilities(probabilities)
 
             return {

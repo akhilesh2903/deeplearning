@@ -235,8 +235,9 @@ def validate_ultrasound_image(filepath):
         bright_pixels = np.sum(gray > 215)
         bright_ratio = bright_pixels / float(total_pixels)
         
-        # If the image has too many intensely bright pixels and low overall mid-grays, it's likely not a fetus
-        if bright_ratio > 0.02 and mid_gray_ratio < 0.45:
+        # Only reject if the vast majority of pixels are intensely bright (e.g. pure X-ray)
+        # Threshold relaxed: real ultrasounds often have bright echogenic structures
+        if bright_ratio > 0.15 and mid_gray_ratio < 0.20:
             return (
                 False,
                 "The inputted image cannot be scanned. "
@@ -472,13 +473,9 @@ def diagnose():
         print(f"  [OK] Prediction: {cnn_prediction['risk_level']} ({cnn_prediction['class_label']})")
         print(f"  [OK] Confidence: {cnn_prediction['confidence_percentage']:.1f}%")
 
-        # ── VERIFY FETUS PRESENCE (Confidence Check) ──────────────────────────
-        # If confidence is lower than a set threshold, it's likely an out-of-distribution image like a skeleton
-        if cnn_prediction['confidence_percentage'] < 72.0:
-            return jsonify({
-                'error': "The inputted image cannot be scanned. It does not contain the image of a fetus.",
-                'error_type': 'invalid_ultrasound'
-            }), 422
+        # NOTE: Confidence-based fetus rejection removed — model confidence is
+        # unreliable without a fine-tuned checkpoint (ImageNet weights only).
+        # Image validity is already enforced by validate_ultrasound_image().
 
         # ── STEP 2: RAG RETRIEVAL ─────────────────────────────────────────────
         print("  [2/4] Retrieving medical context (RAG)...")
